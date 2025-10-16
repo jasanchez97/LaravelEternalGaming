@@ -16,25 +16,35 @@ You need to have Laragon and the lastest PHP version installed before, here are 
 
 Head to install the 8.4 version and change it in the Window Toolbar where you change settings for Laragon, go to PHP and select the version.
 
-Once all these programs have been downloaded, download the repository in the git terminal within Visual Studio with this command:
+Once all these programs have been downloaded, download the repository in the git terminal within Visual Studio with this command and directory:
 
     git clone https://github.com/jasanchez97/LaravelEternalGaming.git
 
+    Directory:
+      "C:\laragon\www\theproject"
+
 ## Deployment
 
-One you follow these steps, open Laragon and initiate all services, then open the terminal and insert this command:
+One you follow these steps, open the Laragon terminal, then insert the following command:
+
+  composer install
+
+The next step is copying the .envexample from the project root folder and rename to .env.
+
+Then do again in terminal laragon:
+
+  php artisan migrate (insert yes to create the table)
+
+  php artisan key:generate
+
+Now you can initiate all laragon services and the last commmand to do in terminal for opening the project is:
 
     php artisan serve
-
-Now you can visualize the project I did.
 
 ## Built With
 
   - [Knowledge] - Of my self and by a huge back of the enough internet, obviously all thanks to my teacher, Tiburcio
   - [Creative Commons](https://creativecommons.org/) - Used to choose the license
-  - [POSTMAN] - A big help of this aplication to test without breaking the head, here are the link: 
-                
-                https://documenter.getpostman.com/view/48535726/2sB3QJPWWt
 
 ## Contributing
 
